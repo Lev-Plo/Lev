@@ -7,6 +7,9 @@
   --white-color: #fff;
   --black-color: #000;
 }
+body {
+  font-family: 'Roboto';
+}
 
 a {
   color: inherit;
