@@ -1,4 +1,4 @@
-:root {
+ :root {
   --brand-blue-color: #2196F3;
   --brand-dark-gray-color: #2F303A;
   --brand-light-gray-color: #F5F4FA;
@@ -27,6 +27,13 @@ a {
 /* style for header */
 .header {
   padding: 24px 0;
+  display: flex;
+  flex-wrap: nowrap;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .header-logo {
   font-family: 'Raleway';
@@ -36,9 +43,17 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
+.header-info {
+  display: flex;
+  justify-content: space-between;
+}
 .logo-blue {
   color: var(--brand-blue-color);
   letter-spacing: 0.03em;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
 }
 .nav-link {
   color: var(--brand-dark-text-color);
@@ -60,6 +75,12 @@ a {
   background-color: var(--brand-dark-gray-color);
   letter-spacing: 1.08px;
   padding: 200px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .hero-title {
   color: var(--white-color);
@@ -83,6 +104,10 @@ a {
 /* style for description  */
 .description {
   padding-top: 94px;
+  }
+.description-list {
+  display: flex;
+  justify-content: space-between;
 }
 .description-name {
   color: var(--brand-dark-text-color);
@@ -111,6 +136,10 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.work-list {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* style for team */
 .team {
@@ -124,6 +153,10 @@ a {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.team-list {
+  display: flex;
+  justify-content: space-between;
 }
 .team-name {
   color: var(--brand-dark-text-color);
@@ -146,6 +179,10 @@ a {
 .projects {
   padding: 94px 0;
 }
+.projects-filter {
+  display: flex;
+  justify-content: center;
+}
 .filter-btn {
   color: var(--brand-dark-text-color);
   background-color: var(--brand-light-gray-color);
@@ -154,6 +191,11 @@ a {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .project-name {
   color: var(--brand-dark-text-color);
@@ -193,4 +235,4 @@ a {
 .footer .address-item:first-child .address-link {
   color: var(--white-color);
   letter-spacing: 0.03em;
-}
+} 
