@@ -27,12 +27,10 @@ a {
 /* style for header */
 .header {
   padding: 24px 0;
-  display: flex;
-  flex-wrap: nowrap;
 
   .container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
 }
 .header-logo {
@@ -42,11 +40,12 @@ a {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-right: 93px;
 }
 .header-info {
   display: flex;
-  justify-content: space-between;
   gap: 50px;
+  margin-left: auto;
 }
 .logo-blue {
   color: var(--brand-blue-color);
@@ -96,6 +95,8 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   width: 696px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .hero-btn {
   color: var(--white-color);
@@ -116,7 +117,7 @@ a {
   }
 .description-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .description-name {
   color: var(--brand-dark-text-color);
@@ -145,7 +146,7 @@ a {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin: 50px 0px;
+  margin-bottom: 50px;
 }
 .work-list {
   display: flex;
@@ -156,6 +157,10 @@ a {
 .team {
   background-color: var(--brand-light-gray-color);
   padding: 94px 0;
+
+  .container {
+    background-color: var(--white-color #fff);
+  }
 }
 .team-title {
   color: var(--brand-dark-text-color);
@@ -164,11 +169,16 @@ a {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin: 50px 0px;
+  margin-bottom: 50px;
 }
 .team-list {
   display: flex;
   justify-content: space-between;
+}
+.team-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--white-color);
 }
 .team-name {
   color: var(--brand-dark-text-color);
@@ -177,6 +187,7 @@ a {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 .team-text {
   color: var(--brand-light-text-color);
@@ -236,6 +247,8 @@ a {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 .address-link {
   color: var(--brand-light-text-color);
