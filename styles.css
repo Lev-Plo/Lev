@@ -217,8 +217,8 @@ a {
 }
 .project-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .project-name {
   color: var(--brand-dark-text-color);
