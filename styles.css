@@ -207,6 +207,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 8px;
+  margin-bottom: 50px;
 }
 .filter-btn {
   color: var(--brand-dark-text-color);
@@ -217,13 +218,13 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   border: none;
-  margin-bottom: 50px;
   padding: 6px 22px;
 }
 .project-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  flex-basis: calc(100% / 3);
   
   .project-box {
     padding: 20px 24px;
