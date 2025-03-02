@@ -4,6 +4,7 @@
   --brand-light-gray-color: #f5f4fa;
   --brand-dark-text-color: #212121;
   --brand-light-text-color: #757575;
+  --brand-light-icon-color: #AFB1B8;
   --brand-header-border-color: #ececec;
   --brand-border-color: #eeeeee;
   --white-color: #fff;
@@ -49,6 +50,15 @@ a {
   gap: 50px;
   margin-left: auto;
 }
+.header-icon{
+  width: 16px;
+  height: 12px;
+  fill: var(--brand-light-text-color);
+}
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
 .logo-blue {
   color: var(--brand-blue-color);
   letter-spacing: 0.03em;
@@ -67,6 +77,9 @@ a {
 }
 .nav-link:hover, .info-link:hover {
   color: var(--brand-blue-color);
+  .header-icon {
+    fill: var(--brand-blue-color);
+  }
 }
 .nav-item {
   display: flex;
@@ -78,8 +91,10 @@ a {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-
 /* style for hero */
 .hero {
   padding: 200px 0;
@@ -88,6 +103,8 @@ a {
       rgba(47, 48, 58, 0.4)
     ),
     url(./images/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
   .container {
     display: flex;
     align-items: center;
@@ -212,13 +229,13 @@ a {
   padding-bottom: 30px;
   background-color: var(--white-color);
   border-radius: 0px 0px 4px 4px;
+  justify-items: center;
 }
 .team-name {
   color: var(--brand-dark-text-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
@@ -227,8 +244,70 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.socialmedia-list {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+}
+.socialmedia-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialmedia-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--brand-light-icon-color);
+}
+
+.socialmedia-link:hover{
+  background-color: var(--brand-blue-color);
+  .socialmedia-icon {
+    fill: var(--white-color);
+  }
+} 
+
+/* style for clients */
+.clients {
+  padding: 94px 0;
+}
+.clients-title {
+  color: var(--brand-dark-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-link {
+  width: 170px;
+  height: 92px;
+  border-radius: 5px;
+  border: var(--brand-light-icon-color) 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-link:hover {
+  border: var(--brand-blue-color) 1px solid;
+  .client-icon {
+    fill: var(--brand-blue-color);
+  }
+}
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--brand-light-icon-color);
 }
 
 /* style for projects */
@@ -295,6 +374,26 @@ a {
 .footer {
   background-color: var(--brand-dark-gray-color);
   padding: 60px 0;
+
+  .container {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+  }
+  .socialmedia-list {
+    padding-top: 20px;
+  }
+  .socialmedia-link{
+    background-color: rgba(255, 255, 255, 0.10);
+  }
+  .socialmedia-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-color);
+  }
+  .socialmedia-link:hover{
+    background-color: var(--brand-blue-color);
+  } 
 }
 .footer-logo {
   font-family: 'Raleway';
@@ -305,6 +404,15 @@ a {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   display: inline-block;
+}
+.footer-join {
+  color: var(--white-color);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
 }
 .address-item {
   margin-bottom: 9px;
