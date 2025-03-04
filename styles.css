@@ -267,7 +267,7 @@ a {
 .socialmedia-list {
   display: flex;
   gap: 10px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .socialmedia-link {
   width: 44px;
@@ -360,6 +360,7 @@ a {
   flex-wrap: wrap;
   gap: 30px;
   flex-basis: calc(100% / 3);
+  justify-content: space-between;
 
   .project-box {
     padding: 20px 24px;
@@ -399,7 +400,7 @@ a {
     align-items: baseline;
   }
   .socialmedia-list {
-    padding-top: 20px;
+    margin-top: 20px;
   }
   .socialmedia-link{
     background-color: rgba(255, 255, 255, 0.10);
