@@ -197,6 +197,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.work-item {
+  height: 294px;
+}
 .work-text {
   color: var(--white-color);
   text-align: center;
