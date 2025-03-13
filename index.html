@@ -364,14 +364,15 @@
           </li>
         </ul>
       </div>
-      <div class="footer-subscribe">
+      <form class="footer-subscribe">
         <p class="subscribe-site">Підпишіться на розсилку</p>
         <input type="text" class="subscribe-email" placeholder="E-mail">
-        <button class="subscribe-btn">Підписатися<svg class="subscribe-send">
+        <button class="subscribe-btn" type="submit"><a href="">Підписатися<svg class="subscribe-send">
             <use href="./images/symbol-defs.svg#icon-icon-send"></use>
           </svg>
+        </a>
         </button>
-      </div>
+      </form>
     </div>
   </footer>
   <div class="backdrop is-hidden" data-modal>
@@ -382,22 +383,31 @@
       <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
       <form class="modal-form">
         <label class="modal-label">Ім'я
-          <input type="text" class="modal-input">
+          <input required type="text" class="modal-input">
+          <svg class="modal-icon">
+            <use href="./images/symbol-defs.svg#icon-person"></use>
+          </svg>
         </label>
         <label class="modal-label">Телефон
-          <input type="text" class="modal-input">
+          <input required type="tel" class="modal-input">
+          <svg class="modal-icon">
+            <use href="./images/symbol-defs.svg#icon-phone"></use>
+          </svg>
         </label>
         <label class="modal-label">Пошта
-          <input type="text" class="modal-input">
+          <input required type="email" class="modal-input">
+          <svg class="modal-icon">
+            <use href="./images/symbol-defs.svg#icon-email-black"></use>
+          </svg>
         </label>
         <label class="modal-label">Коментар
           <textarea class="modal-textarea" placeholder="Введіть текст" id="" rows="3"></textarea>
         </label>
         <div class="modal-box">
-          <input type="checkbox" class="modal-checkbox">
+          <input required type="checkbox" class="modal-checkbox">
           <p class="modal-text">Погоджуюся з розсилкою та приймаю <a class="rules-link" href="#">Умови договору</a></p>
         </div>
-        <button class="modal-btn" type="button">Відправити</button>
+        <button class="modal-btn" data-modal-close type="submit">Відправити</button>
       </form>
     </div>
   </div>
