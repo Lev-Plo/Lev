@@ -647,6 +647,11 @@ a {
   top: 32px;
   left: 12px;
 }
+.modal-label:hover {
+  .modal-icon {
+    fill: var(--brand-blue-color);
+  }
+}
 .footer-subscribe {
   margin-left: 72px;
 }
