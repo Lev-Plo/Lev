@@ -659,7 +659,7 @@ a {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .subscribe-email {
   width: 358px;
