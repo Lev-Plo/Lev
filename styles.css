@@ -74,6 +74,9 @@ a {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active {
   color: var(--brand-blue-color);
@@ -88,12 +91,14 @@ a {
   border-radius: 2px;
   left: 0;
   bottom: -31px;
-  display: none;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:hover::after {
-  display: block;
-  transition-duration: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--brand-blue-color);
+  opacity: 1;
 }
 .nav-link:hover, .info-link:hover {
   color: var(--brand-blue-color);
@@ -117,6 +122,14 @@ a {
   display: flex;
   gap: 10px;
   align-items: center;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-icon {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* style for hero */
 .hero {
@@ -302,11 +315,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socialmedia-icon {
   width: 20px;
   height: 20px;
   fill: var(--brand-light-icon-color);
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia-link:hover{
@@ -344,6 +363,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover {
   border: var(--brand-blue-color) 1px solid;
@@ -358,6 +380,9 @@ a {
   width: 106px;
   height: 60px;
   fill: var(--brand-light-icon-color);
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* style for projects */
@@ -380,6 +405,9 @@ a {
   letter-spacing: 0.03em;
   border: none;
   padding: 6px 22px;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-btn:hover {
   box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
@@ -409,7 +437,6 @@ a {
 }
 
 .project-hover {
-  /* display: none; */
   position: absolute;
   width: 370px;
   height: 294px;
@@ -422,20 +449,16 @@ a {
   line-height: 28px;
   letter-spacing: 0.54px;
   padding: 63px 24px;
-  transition-property: transform;
-  transition-duration: 1000ms;
+  transition-property: all;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: translateY(100%);
   opacity: 0;
   z-index: 1;
-  /* visibility: hidden; */
 }
 .project-item:hover {
   .project-hover {
-    /* transition-duration: 250ms; */
-    /* transition: cubic-bezier(0.4, 0, 0.2, 1); */
     transform: translateY(0);
-    /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
     opacity: 1;
   }
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
@@ -477,6 +500,9 @@ a {
     width: 20px;
     height: 20px;
     fill: var(--white-color);
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   .socialmedia-link:hover{
     background-color: var(--brand-blue-color);
@@ -592,6 +618,9 @@ a {
   margin-top: 4px;
   display: block;
   padding-left: 42px;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .modal-textarea {
   width: 100%;
@@ -663,6 +692,9 @@ a {
 .modal-link {
   display: flex;
   justify-content: center;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .close-icon {
   height: 16px;
@@ -687,6 +719,9 @@ a {
   position: absolute;
   top: 32px;
   left: 12px;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .modal-label:hover {
   .modal-icon {
