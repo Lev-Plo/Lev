@@ -8,17 +8,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./reset.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./images/symbol-defs.svg">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./reset.css" />
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" data-aos="flip-left"
+  data-aos-easing="ease-out-cubic"
+  data-aos-duration="2000">
     <div class="container">
       <a class="header-logo" href="./index.html">
         <span class="logo-blue">Web</span>Studio</a>
@@ -52,7 +55,9 @@
       </ul>
     </div>
   </header>
-  <main class="main">
+  <main class="main" data-aos="flip-left"
+  data-aos-easing="ease-out-cubic"
+  data-aos-duration="2000">>
     <section class="hero">
       <div class="container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
@@ -97,21 +102,21 @@
         <h2 class="work-title">Чим ми займаємося</h2>
         <ul class="work-list">
           <li class="work-item">
-            <img class="work-photo" src="./images/computer.webp" alt="" />
+            <img class="work-photo" data-aos="zoom-in-right" src="./images/computer.webp" alt="" />
             <p class="work-text">Десктопні додатки</p>
           </li>
           <li class="work-item">
-            <img class="work-photo" src="./images/phone-comp.webp" alt="" />
+            <img class="work-photo" data-aos="flip-up" src="./images/phone-comp.webp" alt="" />
             <p class="work-text">Мобільні додатки</p>
           </li>
           <li class="work-item">
-            <img class="work-photo" src="./images/tablet.webp" alt="" />
+            <img class="work-photo" data-aos="zoom-in" src="./images/tablet.webp" alt="" />
             <p class="work-text">Дизайнерські рішення</p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="team">
+    <section class="team" data-aos="zoom-out-up">
       <div class="container">
         <h2 class="team-title">Наша команда</h2>
         <ul class="team-list">
@@ -262,7 +267,10 @@
         </ul>
       </div>
     </section>
-    <section class="clients">
+    <section class="clients" data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0">
       <div class="container">
         <h2 class="clients-title">Постійні клієнти</h2>
         <ul class="client-list">
@@ -411,6 +419,10 @@
     </div>
   </div>
   <script src="./js/modal.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
