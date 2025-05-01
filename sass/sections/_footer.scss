@@ -68,10 +68,10 @@
     &__link {
       color: var(--brand-light-text-color);
     }
-    .footer-subscribe {
+    &__subscribe {
       margin-left: 72px;
     }
-    .subscribe-site {
+    &__site {
       color: var(--white-color);
       font-family: "Roboto";
       font-size: 14px;
@@ -82,7 +82,7 @@
       text-transform: uppercase;
       margin-bottom: 20px;
     }
-    .subscribe-email {
+    &__email {
       width: 358px;
       height: 50px;
       flex-shrink: 0;
@@ -93,7 +93,7 @@
       margin-right: 12px;
       padding: 15px 16px;
     }
-    .subscribe-btn {
+    &__btn {
       width: 200px;
       height: 50px;
       border-radius: 4px;
@@ -109,7 +109,7 @@
       line-height: 40px;
       letter-spacing: 0.96px;
     }
-    .subscribe-send {
+    &__send {
       width: 24px;
       height: 24px;
       fill: var(--white-color);
