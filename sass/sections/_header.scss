@@ -1,13 +1,13 @@
 .header {
-    padding: 24px 0;
-    border-bottom: var(--brand-header-border-color);
-  
-    .container {
-      display: flex;
-      align-items: center;
-    }
+  padding: 24px 0;
+  border-bottom: var(--brand-header-border-color);
+
+  &>.container {
+    @include flexbox();
+    // display: flex;
+    // align-items: center;
   }
-  .header-logo {
+  &__logo {
     font-family: 'Raleway';
     color: var(--black-color);
     font-size: 26px;
@@ -16,43 +16,32 @@
     letter-spacing: 0.03em;
     margin-right: 93px;
   }
-  .header-info {
-    display: flex;
-    gap: 50px;
-    margin-left: auto;
-  }
-  .header-icon{
-    width: 16px;
-    height: 12px;
-    fill: var(--brand-light-text-color);
-  }
-  .smartphone {
-    width: 10px;
-    height: 16px;
-  }
-  .logo-blue {
+  &__blue {
     color: var(--brand-blue-color);
     letter-spacing: 0.03em;
   }
-  .nav-list {
+  &__list {
     display: flex;
     justify-content: space-around;
     gap: 50px;
   }
-  .nav-link {
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+  }
+  &__link {
     color: var(--brand-dark-text-color);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .active {
-    color: var(--brand-blue-color);
-  }
-  .nav-link::after {
+  &__link::after {
     content: "";
     display: block;
     width: 100%;
@@ -64,27 +53,30 @@
     bottom: -31px;
     opacity: 0;
     transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .nav-link:hover::after {
+  &__link:hover::after {
     background-color: var(--brand-blue-color);
     opacity: 1;
   }
-  .nav-link:hover, .info-link:hover {
+  &__link:hover,
+  &__contacts:hover {
     color: var(--brand-blue-color);
-    .header-icon {
+    .header__icon {
       fill: var(--brand-blue-color);
-      transition-duration: 250ms;
-      transition: cubic-bezier(0.4, 0, 0.2, 1);
+      @extend %transition;
+      // transition-duration: 250ms;
+      // transition: cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
-  .nav-item {
+  &__items {
     display: flex;
-    justify-content: space-around;
-    position: relative;
+    gap: 50px;
+    margin-left: auto;
   }
-  .info-link {
+  &__contacts {
     color: var(--brand-light-text-color);
     font-size: 14px;
     font-weight: 500;
@@ -94,11 +86,25 @@
     gap: 10px;
     align-items: center;
     transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .header-icon {
+  &__icon {
+    width: 16px;
+    height: 12px;
+    fill: var(--brand-light-text-color);
     transition-property: all;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
+.active {
+  color: var(--brand-blue-color);
+}
