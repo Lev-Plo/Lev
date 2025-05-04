@@ -20,13 +20,13 @@
     <div class="container">
       <a class="header__logo" href="./index.html">
         <span class="header__blue">Web</span>Studio</a>
-      <nav class="header-nav">
+      <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a class="headr__link active" href="./index.html"> Студія</a>
+            <a class="header__link" href="./index.html"> Студія</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="./portfolio.html">Портфоліо</a>
+            <a class="header__link active" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="./contacts.html">Контакти</a>
@@ -51,9 +51,9 @@
     </div>
   </header>
   <main class="main">
-    <section class="projects">
+    <section class="project">
       <div class="container">
-        <ul class="projects__filter">
+        <ul class="project__filter">
           <li class="filter__item">
             <button class="filter__btn" type="button">Усі</button>
           </li>
@@ -185,60 +185,61 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer-contact">
-        <a class="footer-logo" href="./index.html"><span class="logo-blue">Web</span>Studio</a>
-        <address class="address">
-          <ul class="address-list">
-            <li class="address-item">
-              <a class="address-link"
+      <div class="footer__contact">
+        <a class="footer__logo" href="./index.html"><span class="footer__logo__blue">Web</span>Studio</a>
+        <address class="footer__address">
+          <ul class="footer__address__list">
+            <li class="footer__address__item">
+              <a class="footer__address__link"
                 href="https://www.google.es/maps/search/%D0%BC.+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%BF%D1%80-%D1%82+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26/@50.4728232,30.4472504,13z/data=!3m1!4b1?hl=es&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">м.
                 Київ, пр-т Лесі Українки, 26</a>
             </li>
-            <li class="address-item">
-              <a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <li class="footer__address__item">
+              <a class="footer__address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li class="address-item">
-              <a class="address-link" href="tell:+380961111111">+38 096 111 11 11</a>
+            <li class="footer__address__item">
+              <a class="footer__address__link" href="tell:+380961111111">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
       </div>
-      <div class="footer-socialmedia">
-        <p class="footer-join">приєднуйтесь</p>
-        <ul class="socialmedia-list">
-          <li class="socialmedia-item">
-            <a href="#" class="socialmedia-link">
-              <svg class="socialmedia-icon">
+      <div class="footer__socialmedia">
+        <p class="footer__title">приєднуйтесь</p>
+        <ul class="footer__socialmedia__list">
+          <li class="footer__socialmedia__item">
+            <a href="#" class="footer__socialmedia__link">
+              <svg class="footer__socialmedia__icon">
                 <use href="./images/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="socialmedia-item">
-            <a href="#" class="socialmedia-link">
-              <svg class="socialmedia-icon">
+          <li class="footer__socialmedia__item">
+            <a href="#" class="footer__socialmedia__link">
+              <svg class="footer__socialmedia__icon">
                 <use href="./images/symbol-defs.svg#icon-twitter"></use>
               </svg></a>
           </li>
-          <li class="socialmedia-item">
-            <a href="#" class="socialmedia-link">
-              <svg class="socialmedia-icon">
+          <li class="footer__socialmedia__item">
+            <a href="#" class="footer__socialmedia__link">
+              <svg class="footer__socialmedia__icon">
                 <use href="./images/symbol-defs.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="socialmedia-item">
-            <a href="#" class="socialmedia-link">
-              <svg class="socialmedia-icon linkedin">
+          <li class="footer__socialmedia__item">
+            <a href="#" class="footer__socialmedia__link">
+              <svg class="footer__socialmedia__icon linkedin">
                 <use href="./images/symbol-defs.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <form class="footer-subscribe">
-        <p class="subscribe-site">Підпишіться на розсилку</p>
-        <input required class="subscribe-email" type="text" placeholder="E-mail">
-        <button class="subscribe-btn" type="submit">Підписатися<svg class="subscribe-send">
+      <form class="footer__subscribe">
+        <p class="footer__title">Підпишіться на розсилку</p>
+        <input required type="email" class="footer__subscribe__email" placeholder="E-mail" />
+        <button class="footer__subscribe__btn" type="submit">
+          Підписатися<svg class="footer__subscribe__send">
             <use href="./images/symbol-defs.svg#icon-icon-send"></use>
           </svg>
         </button>

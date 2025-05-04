@@ -1,54 +1,22 @@
 .footer {
-    background-color: var(--brand-dark-gray-color);
-    padding: 60px 0;
-  
-    &>.container {
-      display: flex;
-      gap: 70px;
-      align-items: baseline;
-    }
-    &__list {
-      margin-top: 20px;
-    }
-    &__link{
-      background-color: rgba(255, 255, 255, 0.10);
-    }
-    &__icon {
-      width: 20px;
-      height: 20px;
-      fill: var(--white-color);
-      transition-property: all;
-      @extend %transition;
-      // transition-duration: 250ms;
-      // transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
-    &__link:hover{
-      background-color: var(--brand-blue-color);
-      @extend %transition;
-      // transition-duration: 250ms;
-      // transition: cubic-bezier(0.4, 0, 0.2, 1);
-    } 
-    &__logo {
-      font-family: 'Raleway';
-      color: var(--white-color);
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 1.17;
-      letter-spacing: 0.03em;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-    &__join {
-      color: var(--white-color);
-      font-family: 'Roboto';
-      font-size: 14px;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: 0.42px;
-      text-transform: uppercase;
-    }
+  background-color: var(--brand-dark-gray-color);
+  padding: 60px 0;
+
+  & > .container {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+  }
+  &__address {
     &__item {
-      margin-bottom: 9px;
+      &:first-child {
+        .footer__address__link {
+          color: var(--white-color);
+          letter-spacing: 0.03em;
+          margin: 9px 0px;
+          font-style: normal;
+        }
+      }
     }
     &__link {
       color: var(--brand-light-text-color);
@@ -59,36 +27,78 @@
       margin: 9px 0px;
       font-style: normal;
     }
-    .footer .address-item:first-child .address-link {
-      color: var(--white-color);
-      letter-spacing: 0.03em;
-      margin: 9px 0px;
-      font-style: normal;
+  }
+  &__logo {
+    font-family: "Raleway";
+    color: var(--white-color);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    display: inline-block;
+    &__blue {
+      color: var(--brand-blue-color);
+    }
+  }
+  &__title {
+    color: var(--white-color);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__socialmedia {
+    &__list {
+      gap: 10px;
+      @include flexbox();
     }
     &__link {
-      color: var(--brand-light-text-color);
+      width: 44px;
+      height: 44px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      @include flexbox();
+      &:hover {
+        background-color: var(--brand-blue-color);
+        @extend %transition;
+        // transition-duration: 250ms;
+        // transition: cubic-bezier(0.4, 0, 0.2, 1);
+      }
     }
-    &__subscribe {
-      margin-left: 72px;
+    &__icon {
+      width: 20px;
+      height: 20px;
+      fill: var(--white-color);
+      transition-property: all;
+      @extend %transition;
+      // transition-duration: 250ms;
+      // transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-    &__site {
-      color: var(--white-color);
-      font-family: "Roboto";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: 0.42px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
+  }
+  .footer .address-item:first-child .address-link {
+    color: var(--white-color);
+    letter-spacing: 0.03em;
+    margin: 9px 0px;
+    font-style: normal;
+  }
+  &__link {
+    color: var(--brand-light-text-color);
+  }
+  &__subscribe {
+    margin-left: 72px;
+
     &__email {
       width: 358px;
       height: 50px;
       flex-shrink: 0;
       border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.30);
-      background: rgba(33, 150, 243, 0.00);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(33, 150, 243, 0);
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
       margin-right: 12px;
       padding: 15px 16px;
@@ -117,5 +127,5 @@
       top: 5px;
       margin-left: 10px;
     }
- }
-  
+  }
+}
