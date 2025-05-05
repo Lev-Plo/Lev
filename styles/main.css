@@ -21,19 +21,6 @@ h1, h2, h3, h4, p {
   margin: 0;
 }
 
-:root {
-  --brand-blue-color: #2196f3;
-  --brand-dark-gray-color: #2f303a;
-  --brand-light-gray-color: #f5f4fa;
-  --brand-dark-text-color: #212121;
-  --brand-light-text-color: #757575;
-  --brand-light-icon-color: #AFB1B8;
-  --brand-header-border-color: #ececec;
-  --brand-border-color: #eeeeee;
-  --white-color: #fff;
-  --black-color: #000;
-}
-
 body {
   font-family: "Roboto";
 }
@@ -347,7 +334,7 @@ a {
 
 .hero {
   padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../../images/hero.webp);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -397,18 +384,18 @@ a {
   background: var(--brand-light-gray-color);
   display: block;
   margin-bottom: 30px;
-  background-image: url(./../../images/antenna.webp);
+  background-image: url(../images/antenna.webp);
   background-repeat: no-repeat;
   background-position: center;
 }
 .description__item:nth-child(2)::before {
-  background-image: url(./../../images/clock.webp);
+  background-image: url(../images/clock.webp);
 }
 .description__item:nth-child(3)::before {
-  background-image: url(./../../images/diagram.webp);
+  background-image: url(../images/diagram.webp);
 }
 .description__item:nth-child(4)::before {
-  background-image: url(./../../images/astronaut.webp);
+  background-image: url(../images/astronaut.webp);
 }
 .description__name {
   color: var(--brand-dark-text-color);
