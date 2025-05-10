@@ -10,8 +10,8 @@
   }
   .filter {
     &__btn {
-      color: var(--brand-dark-text-color);
-      background-color: var(--brand-light-gray-color);
+      color: $brand-dark-text-color;
+      background-color: $brand-light-gray-color;
       font-size: 16px;
       font-weight: 500;
       line-height: 1.63;
@@ -28,8 +28,8 @@
         box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
           0px 1px 2px 0px rgba(0, 0, 0, 0.08),
           0px 2px 2px 0px rgba(0, 0, 0, 0.12);
-        background-color: var(--brand-blue-color);
-        color: var(--white-color);
+        background-color: $brand-blue-color;
+        color: $white-color;
         @extend %transition;
         // transition-duration: 250ms;
         // transition: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +48,7 @@
     padding: 20px 24px;
   }
   &__item {
-    outline: 1px solid var(--brand-border-color);
+    outline: 1px solid $brand-border-color;
     &:hover {
       .project__hover {
         transform: translateY(0);
@@ -68,7 +68,7 @@
     width: 370px;
     height: 294px;
     background: rgba(33, 150, 243, 0.9);
-    color: var(--white-color);
+    color: $white-color;
     font-family: "Roboto";
     font-size: 18px;
     font-style: normal;
@@ -85,7 +85,7 @@
     z-index: 1;
   }
   &__name {
-    color: var(--brand-dark-text-color);
+    color: $brand-dark-text-color;
     font-size: 18px;
     font-weight: 700;
     line-height: 2;
@@ -93,7 +93,7 @@
     margin-bottom: 4px;
   }
   &__text {
-    color: var(--brand-light-text-color);
+    color: $brand-light-text-color;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.88;

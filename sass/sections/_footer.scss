@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--brand-dark-gray-color);
+  background-color: $brand-dark-gray-color;
   padding: 60px 0;
 
   & > .container {
@@ -11,7 +11,7 @@
     &__item {
       &:first-child {
         .footer__address__link {
-          color: var(--white-color);
+          color: $white-color;
           letter-spacing: 0.03em;
           margin: 9px 0px;
           font-style: normal;
@@ -19,7 +19,7 @@
       }
     }
     &__link {
-      color: var(--brand-light-text-color);
+      color: $brand-light-text-color;
       font-size: 14px;
       font-weight: 400;
       line-height: 1.71;
@@ -30,7 +30,7 @@
   }
   &__logo {
     font-family: "Raleway";
-    color: var(--white-color);
+    color: $white-color;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.17;
@@ -38,11 +38,11 @@
     margin-bottom: 20px;
     display: inline-block;
     &__blue {
-      color: var(--brand-blue-color);
+      color: $brand-blue-color;
     }
   }
   &__title {
-    color: var(--white-color);
+    color: $white-color;
     font-family: "Roboto";
     font-size: 14px;
     font-weight: 700;
@@ -64,7 +64,7 @@
       border-radius: 50%;
       @include flexbox();
       &:hover {
-        background-color: var(--brand-blue-color);
+        background-color: $brand-blue-color;
         @extend %transition;
         // transition-duration: 250ms;
         // transition: cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,7 +73,7 @@
     &__icon {
       width: 20px;
       height: 20px;
-      fill: var(--white-color);
+      fill: $white-color;
       transition-property: all;
       @extend %transition;
       // transition-duration: 250ms;
@@ -81,13 +81,13 @@
     }
   }
   .footer .address-item:first-child .address-link {
-    color: var(--white-color);
+    color: $white-color;
     letter-spacing: 0.03em;
     margin: 9px 0px;
     font-style: normal;
   }
   &__link {
-    color: var(--brand-light-text-color);
+    color: $brand-light-text-color;
   }
   &__subscribe {
     margin-left: 72px;
@@ -107,10 +107,10 @@
       width: 200px;
       height: 50px;
       border-radius: 4px;
-      background: var(--brand-blue-color);
+      background: $brand-blue-color;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
       border: none;
-      color: var(--white-color);
+      color: $white-color;
       text-align: center;
       font-family: "Roboto";
       font-size: 16px;
@@ -122,7 +122,7 @@
     &__send {
       width: 24px;
       height: 24px;
-      fill: var(--white-color);
+      fill: $white-color;
       position: relative;
       top: 5px;
       margin-left: 10px;

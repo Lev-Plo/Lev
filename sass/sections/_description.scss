@@ -10,7 +10,7 @@
       width: 270px;
       height: 120px;
       border-radius: 4px;
-      background: var(--brand-light-gray-color);
+      background: $brand-light-gray-color;
       display: block;
       margin-bottom: 30px;
       background-image: url(../images/antenna.webp);
@@ -27,7 +27,7 @@
       background-image: url(../images/astronaut.webp);
     }
     &__name {
-      color: var(--brand-dark-text-color);
+      color: $brand-dark-text-color;
       font-size: 14px;
       font-weight: 700;
       line-height: 1.17;
@@ -35,7 +35,7 @@
       margin: 10px 0px;
     }
     &__text {
-      color: var(--brand-light-text-color);
+      color: $brand-light-text-color;
       font-size: 14px;
       font-weight: 400;
       line-height: 1.71;

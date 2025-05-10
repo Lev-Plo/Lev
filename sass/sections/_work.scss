@@ -2,7 +2,7 @@
     padding: 94px 0;
 
     &__title {
-      color: var(--brand-dark-text-color);
+      color: $brand-dark-text-color;
       font-size: 36px;
       font-weight: 700;
       line-height: 1.17;
@@ -18,7 +18,7 @@
       height: 294px;
     }
     &__text {
-      color: var(--white-color);
+      color: $white-color;
       text-align: center;
       font-family: 'Roboto';
       font-size: 14px;
