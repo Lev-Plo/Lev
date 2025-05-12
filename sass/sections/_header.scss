@@ -1,29 +1,56 @@
 .header {
-  padding: 24px 0;
+  padding: 10px 0;
   border-bottom: $brand-header-border-color;
 
-  &>.container {
+  @media screen and (min-width: 768px) {
+    padding: 21px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 25px 0;
+  }
+
+  & > .container {
     @include flexbox();
     // display: flex;
     // align-items: center;
   }
   &__logo {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     color: $black-color;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    line-height: 1.38;
+    letter-spacing: 0.72px;
     margin-right: 93px;
   }
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    margin-right: auto;
+  }
+
   &__blue {
     color: $brand-blue-color;
     letter-spacing: 0.03em;
   }
   &__list {
-    display: flex;
-    justify-content: space-around;
-    gap: 50px;
+    display: none;
+    flex-direction: column;
+    // justify-content: space-around;
+    margin-left: auto;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 30px;
+      flex-direction: row;
+    }
   }
   &__item {
     display: flex;
@@ -71,17 +98,21 @@
       // transition: cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
   &__items {
     display: flex;
     gap: 50px;
-    margin-left: auto;
+    // margin-left: auto;
   }
   &__contacts {
     color: $brand-light-text-color;
     font-size: 14px;
     font-weight: 500;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -89,6 +120,11 @@
     @extend %transition;
     // transition-duration: 250ms;
     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+    }
   }
   &__icon {
     width: 16px;
