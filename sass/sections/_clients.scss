@@ -1,3 +1,57 @@
+// .client {
+//   padding: 94px 0;
+
+//   &__title {
+//     color: $brand-dark-text-color;
+//     font-size: 36px;
+//     font-weight: 700;
+//     line-height: 1.17;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//     margin-bottom: 50px;
+//   }
+//   &__list {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   &__link {
+//     width: 170px;
+//     height: 92px;
+//     border-radius: 5px;
+//     border: $brand-light-icon-color 1px solid;
+//     @include flexbox();
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     transition-property: all;
+//     @extend %transition;
+//     // transition-duration: 250ms;
+//     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//     &:hover {
+//       border: $brand-blue-color 1px solid;
+
+//       .client__icon {
+//         fill: $brand-blue-color;
+//         @extend %transition;
+//         // transition-duration: 250ms;
+//         // transition: cubic-bezier(0.4, 0, 0.2, 1);
+//       }
+//     }
+//   }
+
+//   &__icon {
+//     width: 106px;
+//     height: 60px;
+//     fill: $brand-light-icon-color;
+//     transition-property: all;
+//     @extend %transition;
+//     // transition-duration: 250ms;
+//     // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+// }
+
+
+
 .client {
   padding: 94px 0;
 
@@ -10,32 +64,45 @@
     letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
+
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;  // Додаємо flex-wrap для мобільних і планшетів
+    gap: 20px;
+
+    // Для мобільних пристроїв (max-width: 480px)
+    @media (max-width: 480px) {
+      justify-content: center;  // Центруємо елементи на мобільних
+      gap: 15px;
+    }
+
+    // Для планшетів (min-width: 768px)
+    @media (min-width: 768px) {
+      justify-content: center;  // Центруємо елементи на планшетах
+      gap: 25px;
+    }
+
+    // Для десктопів (min-width: 1200px)
+    @media (min-width: 1200px) {
+      display: flex;
+      justify-content: center;  // Вирівнюємо ліворуч на десктопі
+      // gap: 50px;  // Збільшуємо відстань між елементами
+    }
   }
+
   &__link {
     width: 170px;
     height: 92px;
     border-radius: 5px;
     border: $brand-light-icon-color 1px solid;
-    @include flexbox();
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    transition-property: all;
-    @extend %transition;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      border: $brand-blue-color 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 
-      .client__icon {
-        fill: $brand-blue-color;
-        @extend %transition;
-        // transition-duration: 250ms;
-        // transition: cubic-bezier(0.4, 0, 0.2, 1);
-      }
+    &:hover {
+      border-color: $brand-blue-color;
     }
   }
 
@@ -43,9 +110,8 @@
     width: 106px;
     height: 60px;
     fill: $brand-light-icon-color;
-    transition-property: all;
-    @extend %transition;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease-in-out;
   }
 }
+
+
