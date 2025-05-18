@@ -1,75 +1,157 @@
+// .description {
+//   padding-top: 60px;
+
+//   @media screen and (min-width: 1200px) {
+//     padding-top: 94px;
+//   }
+
+//   &__list {
+//     display: flex;
+//     gap: 30px;
+//     flex-wrap: wrap;
+//   }
+//   &__item::before {
+//     content: "";
+//     width: 100%;
+//     height: 120px;
+//     border-radius: 4px;
+//     background: $brand-light-gray-color;
+//     display: block;
+//     margin-bottom: 30px;
+//     background-image: url(../images/antenna.webp);
+//     background-repeat: no-repeat;
+//     background-position: center;
+
+//     @media screen and (min-width: 480px) {
+//       width: 450px;
+//     }
+//     @media screen and (min-width: 768px) {
+//       width: 354px;
+//     }
+//     @media screen and (min-width: 1200px) {
+//       width: 270px;
+//     }
+//   }
+//   &__item:nth-child(2)::before {
+//     background-image: url(../images/clock.webp);
+//   }
+//   &__item:nth-child(3)::before {
+//     background-image: url(../images/diagram.webp);
+//   }
+//   &__item:nth-child(4)::before {
+//     background-image: url(../images/astronaut.webp);
+//   }
+//   &__name {
+//     color: $brand-dark-text-color;
+//     font-size: 14px;
+//     font-weight: 700;
+//     text-align: center;
+//     line-height: 1.14;
+//     letter-spacing: 0.42px;
+//     margin: 10px 0px;
+
+//     @media screen and (min-width: 768px) {
+//       text-align: start;
+//     }
+//   }
+//   &__text {
+//     color: $brand-light-text-color;
+//     font-size: 14px;
+//     width: 100%;
+//     font-weight: 400;
+//     line-height: 1.71;
+//     letter-spacing: 0.24px;
+
+//     @media screen and (min-width: 480px) {
+//       width: 450px;
+//     }
+//     @media screen and (min-width: 768px) {
+//       width: 354px;
+//     }
+//     @media screen and (min-width: 1200px) {
+//       width: 270px;
+//     }
+//   }
+// }
+
+
 .description {
   padding-top: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @media (min-width: 1200px) {
     padding-top: 94px;
   }
 
   &__list {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
   }
-  &__item::before {
-    content: "";
-    width: 100%;
-    height: 120px;
-    border-radius: 4px;
-    background: $brand-light-gray-color;
-    display: block;
-    margin-bottom: 30px;
-    background-image: url(../images/antenna.webp);
-    background-repeat: no-repeat;
-    background-position: center;
 
-    @media screen and (min-width: 480px) {
-      width: 450px;
+  &__item {
+    flex-basis: 100%;
+
+    @media (min-width: 480px) {
+      flex-basis: 450px;
     }
-    @media screen and (min-width: 768px) {
-      width: 354px;
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
     }
-    @media screen and (min-width: 1200px) {
-      width: 270px;
+
+    @media (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4); // 3 gaps по 30px
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 120px;
+      border-radius: 4px;
+      background-color: $brand-light-gray-color;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url('../images/antenna.webp');
+    }
+
+    &:nth-child(2)::before {
+      background-image: url('../images/clock.webp');
+    }
+
+    &:nth-child(3)::before {
+      background-image: url('../images/diagram.webp');
+    }
+
+    &:nth-child(4)::before {
+      background-image: url('../images/astronaut.webp');
     }
   }
-  &__item:nth-child(2)::before {
-    background-image: url(../images/clock.webp);
-  }
-  &__item:nth-child(3)::before {
-    background-image: url(../images/diagram.webp);
-  }
-  &__item:nth-child(4)::before {
-    background-image: url(../images/astronaut.webp);
-  }
+
   &__name {
     color: $brand-dark-text-color;
     font-size: 14px;
     font-weight: 700;
-    text-align: center;
     line-height: 1.14;
     letter-spacing: 0.42px;
-    margin: 10px 0px;
+    text-align: center;
+    margin: 10px 0;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       text-align: start;
     }
   }
+
   &__text {
     color: $brand-light-text-color;
     font-size: 14px;
-    width: 100%;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.24px;
-
-    @media screen and (min-width: 480px) {
-      width: 450px;
-    }
-    @media screen and (min-width: 768px) {
-      width: 354px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 270px;
-    }
   }
 }

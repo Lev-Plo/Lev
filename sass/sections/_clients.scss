@@ -50,9 +50,10 @@
 //   }
 // }
 
-
-
 .client {
+  @media (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
   padding: 94px 0;
 
   &__title {
@@ -67,27 +68,23 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap; // Allow wrapping on smaller screens
     justify-content: space-between;
-    flex-wrap: wrap;  // Додаємо flex-wrap для мобільних і планшетів
     gap: 20px;
 
-    // Для мобільних пристроїв (max-width: 480px)
     @media (max-width: 480px) {
-      justify-content: center;  // Центруємо елементи на мобільних
+      justify-content: center; // Center on small mobile screens
       gap: 15px;
     }
 
-    // Для планшетів (min-width: 768px)
     @media (min-width: 768px) {
-      justify-content: center;  // Центруємо елементи на планшетах
+      justify-content: center; // Center on tablets
       gap: 25px;
     }
 
-    // Для десктопів (min-width: 1200px)
     @media (min-width: 1200px) {
-      display: flex;
-      justify-content: center;  // Вирівнюємо ліворуч на десктопі
-      // gap: 50px;  // Збільшуємо відстань між елементами
+      justify-content: flex-start; // Align left on desktop
+      gap: 50px; // Increase gap on desktop
     }
   }
 
@@ -95,11 +92,12 @@
     width: 170px;
     height: 92px;
     border-radius: 5px;
-    border: $brand-light-icon-color 1px solid;
+    border: 1px solid $brand-light-icon-color;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       border-color: $brand-blue-color;
@@ -113,5 +111,3 @@
     transition: all 0.3s ease-in-out;
   }
 }
-
-

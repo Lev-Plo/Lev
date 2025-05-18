@@ -148,7 +148,7 @@
       justify-content: space-between;
       align-items: flex-start;
       text-align: left;
-      gap: 40px;  // Можна зменшити gap на планшетах
+      gap: 40px; // Smaller gap on tablets
     }
 
     @media (min-width: 1200px) {
@@ -220,6 +220,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
 
       &:hover {
         background-color: $brand-blue-color;
@@ -247,7 +248,7 @@
 
     @media (min-width: 1200px) {
       max-width: 570px;
-      margin-left: auto;  // Додаємо margin-left для підписки на десктопах
+      margin-left: auto;
     }
 
     &__email {
@@ -256,9 +257,8 @@
       flex-shrink: 0;
       border-radius: 4px;
       border: 1px solid rgba(255, 255, 255, 0.3);
-      background: rgba(33, 150, 243, 0);
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-      margin-right: 12px;
+      background: transparent;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       padding: 15px 16px;
     }
 
@@ -267,7 +267,7 @@
       height: 50px;
       border-radius: 4px;
       background: $brand-blue-color;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border: none;
       color: $white-color;
       text-align: center;
@@ -293,4 +293,3 @@
     }
   }
 }
-

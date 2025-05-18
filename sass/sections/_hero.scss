@@ -1,59 +1,134 @@
+// .hero {
+//   padding: 118px 0;
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url(../images/hero.webp);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   & > .container {
+//     @include flexbox();
+//     // display: flex;
+//     // align-items: center;
+//     flex-direction: column;
+
+//     @media screen and (min-width: 1200px) {
+//       padding: 200px 0;
+//     }
+//   }
+//   &__title {
+//     color: $white-color;
+//     font-size: 26px;
+//     font-weight: 900;
+//     line-height: 1.36;
+//     text-align: center;
+//     letter-spacing: 1.56px;
+//     width: 100%;
+//     text-transform: uppercase;
+//     margin-bottom: 30px;
+
+//     @media screen and (min-width: 480px) {
+//       width: 360px;
+//     }
+//     // @media screen and (min-width: 768px) {
+//     //  width: 360px;
+//     // }
+//     @media screen and (min-width: 1200px) {
+//     font-size: 44px;
+//     letter-spacing: 2.64px;
+//     width: 696px;
+     
+//     }
+//   }
+//   &__btn {
+//     color: $white-color;
+//     background-color: $brand-blue-color;
+//     font-size: 16px;
+//     font-weight: 700;
+//     line-height: 1.88;
+//     text-align: center;
+//     letter-spacing: 0.96px;
+//     padding: 10px 24px;
+//     height: 50px;
+//     border: none;
+//     @media screen and (min-width: 1200px) {
+//     padding: 10px 32px;
+//     }
+//   }
+// }
+
 .hero {
   padding: 118px 0;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero.webp);
+    url('../images/hero.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  & > .container {
-    @include flexbox();
-    // display: flex;
-    // align-items: center;
-    flex-direction: column;
+  background-position: center;
 
-    @media screen and (min-width: 1200px) {
-      padding: 200px 0;
-    }
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    // ⛔️ Не має бути тут padding: 200px — його ставимо глобально
   }
+
   &__title {
     color: $white-color;
     font-size: 26px;
     font-weight: 900;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 1.56px;
-    width: 100%;
     text-transform: uppercase;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 360px;
 
-    @media screen and (min-width: 480px) {
-      width: 360px;
+    @media (min-width: 768px) {
+      font-size: 32px;
+      max-width: 600px;
+      letter-spacing: 2px;
     }
-    // @media screen and (min-width: 768px) {
-    //  width: 360px;
-    // }
-    @media screen and (min-width: 1200px) {
-    font-size: 44px;
-    letter-spacing: 2.64px;
-    width: 696px;
-     
+
+    @media (min-width: 1200px) {
+      font-size: 44px;
+      max-width: 696px;
+      letter-spacing: 2.64px;
     }
   }
+
   &__btn {
     color: $white-color;
     background-color: $brand-blue-color;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.88;
-    text-align: center;
     letter-spacing: 0.96px;
     padding: 10px 24px;
     height: 50px;
     border: none;
-    @media screen and (min-width: 1200px) {
-    padding: 10px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+
+    &:hover,
+    &:focus {
+      background-color: darken($brand-blue-color, 10%);
+    }
+
+    @media (min-width: 1200px) {
+      padding: 10px 32px;
     }
   }
+
+  // ========= 🧩 Опціональний стиль для великого hero ==============
+  @media (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
+

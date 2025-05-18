@@ -3,11 +3,10 @@
 
   &__filter {
     @include flexbox();
-    // display: flex;
-    // justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
   }
+
   .filter {
     &__btn {
       color: $brand-dark-text-color;
@@ -21,43 +20,46 @@
       padding: 6px 22px;
       transition-property: all;
       @extend %transition;
-      // transition-duration: 250ms;
-      // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover {
-        box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
+        box-shadow:
+          0px 3px 1px 0px rgba(0, 0, 0, 0.1),
           0px 1px 2px 0px rgba(0, 0, 0, 0.08),
           0px 2px 2px 0px rgba(0, 0, 0, 0.12);
         background-color: $brand-blue-color;
         color: $white-color;
         @extend %transition;
-        // transition-duration: 250ms;
-        // transition: cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
   }
+
   &__list {
     @include flexbox();
-    // display: flex;
-    // flex-wrap: wrap;
     gap: 30px;
     flex-basis: calc(100% / 3);
     justify-content: space-between;
   }
+
   &__box {
     padding: 20px 24px;
   }
+
   &__item {
     outline: 1px solid $brand-border-color;
+    position: relative; // Needed for absolute hover overlay positioning
+
     &:hover {
       .project__hover {
         transform: translateY(0);
         opacity: 1;
       }
-      box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
-        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+      box-shadow:
+        0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+        1px 4px 6px 0px rgba(0, 0, 0, 0.16);
     }
   }
+
   &__img {
     overflow: hidden;
     position: relative;
@@ -78,12 +80,11 @@
     padding: 63px 24px;
     transition-property: all;
     @extend %transition;
-    // transition-duration: 1000ms;
-    // transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: translateY(100%);
     opacity: 0;
     z-index: 1;
   }
+
   &__name {
     color: $brand-dark-text-color;
     font-size: 18px;
@@ -92,6 +93,7 @@
     letter-spacing: 0.06em;
     margin-bottom: 4px;
   }
+
   &__text {
     color: $brand-light-text-color;
     font-size: 16px;
