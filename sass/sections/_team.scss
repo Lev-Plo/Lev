@@ -225,56 +225,43 @@
 .team {
   background-color: $brand-light-gray-color;
   padding: 60px 0;
-  display: block;
 
-  @media screen and (min-width: 768px) {
-    padding: 75px 0;
-  }
-
-  @media screen and (min-width: 1200px) {
+  @media (min-width: 1200px) {
     padding: 94px 0;
   }
-
-  // &>.container {
-    
-  // }
 
   &__title {
     color: $brand-dark-text-color;
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       font-size: 28px;
       margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media (min-width: 1200px) {
       font-size: 36px;
       margin-bottom: 50px;
     }
   }
 
   &__list {
-    display: flex;
+    @include flexbox(flex-start, stretch);
     flex-direction: column;
     gap: 30px;
     align-items: center;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media (min-width: 1200px) {
       flex-wrap: nowrap;
-      gap: 30px;
     }
   }
 
@@ -285,75 +272,62 @@
     background-color: $white-color;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 
-      0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 1px rgba(0, 0, 0, 0.14),
+                0 2px 1px rgba(0, 0, 0, 0.2);
 
-    @media screen and (min-width: 768px) {
-      width: calc(50% - 15px); // 2 per row with gap
+    @media (min-width: 768px) {
+      width: calc(50% - 15px);
     }
 
-    @media screen and (min-width: 1200px) {
-      width: calc(25% - 22.5px); // 4 per row with gap
+    @media (min-width: 1200px) {
+      width: calc(25% - 22.5px);
     }
   }
 
   &__box {
     padding: 30px 0;
-    background-color: $white-color;
-    border-radius: 0 0 4px 4px;
-    justify-items: center; // might not be needed here but kept from original
   }
 
   &__name {
     color: $brand-dark-text-color;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
     margin-bottom: 10px;
   }
 
   &__text {
     color: $brand-light-text-color;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
   }
 
-  &__socialmedia {
-    &__list {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 16px;
-    }
+  &__socialmedia__list {
+    @include flexbox();
+    gap: 10px;
+    margin-top: 16px;
+  }
 
-    &__link {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      @include flexbox(); // centers content
-      @extend %transition;
-      cursor: pointer;
+  &__socialmedia__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    @include flexbox();
+    background-color: rgba(255, 255, 255, 0.1);
+    @extend %transition;
 
-      &:hover {
-        background-color: $brand-blue-color;
+    &:hover {
+      background-color: $brand-blue-color;
 
-        .team__socialmedia__icon {
-          fill: $white-color;
-          @extend %transition;
-        }
+      .team__socialmedia__icon {
+        fill: $white-color;
       }
     }
+  }
 
-    &__icon {
-      width: 20px;
-      height: 20px;
-      fill: $brand-light-icon-color;
-      @extend %transition;
-    }
+  &__socialmedia__icon {
+    width: 20px;
+    height: 20px;
+    fill: $brand-light-icon-color;
+    @extend %transition;
   }
 }

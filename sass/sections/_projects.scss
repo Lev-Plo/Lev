@@ -3,7 +3,9 @@
 
   &__filter {
     @include flexbox();
-    gap: 8px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 50px;
   }
 
@@ -14,75 +16,71 @@
       font-size: 16px;
       font-weight: 500;
       line-height: 1.63;
-      text-align: center;
       letter-spacing: 0.03em;
       border: none;
       padding: 6px 22px;
-      transition-property: all;
+      border-radius: 4px;
       @extend %transition;
 
       &:hover {
-        box-shadow:
-          0px 3px 1px 0px rgba(0, 0, 0, 0.1),
-          0px 1px 2px 0px rgba(0, 0, 0, 0.08),
-          0px 2px 2px 0px rgba(0, 0, 0, 0.12);
         background-color: $brand-blue-color;
         color: $white-color;
-        @extend %transition;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
       }
     }
   }
 
   &__list {
     @include flexbox();
+    flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc(100% / 3);
-    justify-content: space-between;
-  }
+    justify-content: center;
 
-  &__box {
-    padding: 20px 24px;
+    @media (min-width: 768px) {
+      justify-content: space-between;
+    }
   }
 
   &__item {
     outline: 1px solid $brand-border-color;
-    position: relative; // Needed for absolute hover overlay positioning
+    width: 100%;
+    max-width: 370px;
+    transition: box-shadow 0.3s ease;
 
     &:hover {
       .project__hover {
         transform: translateY(0);
         opacity: 1;
       }
-      box-shadow:
-        0px 1px 1px 0px rgba(0, 0, 0, 0.12),
-        0px 4px 4px 0px rgba(0, 0, 0, 0.06),
-        1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
   }
 
   &__img {
+    position:relative;
     overflow: hidden;
-    position: relative;
   }
 
   &__hover {
     position: absolute;
-    width: 370px;
-    height: 294px;
+    inset: 0;
     background: rgba(33, 150, 243, 0.9);
     color: $white-color;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.54px;
     padding: 63px 24px;
-    transition-property: all;
-    @extend %transition;
     transform: translateY(100%);
     opacity: 0;
+    transition: all 0.5s ease;
     z-index: 1;
+  }
+
+  &__box {
+    padding: 20px 24px;
   }
 
   &__name {

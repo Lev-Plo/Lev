@@ -158,6 +158,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    @media (min-width: 480px) {
+      justify-content: space-between;
+    }
+  }
+  &__menu {
+    display: none;
   }
 
   &__logo {
@@ -198,12 +205,13 @@
     &:hover,
     &.active {
       color: $brand-blue-color;
+
     }
 
     &.active::after {
       content: "";
       position: absolute;
-      bottom: -8px;
+      bottom: -39px;
       left: 0;
       width: 100%;
       height: 4px;
@@ -251,19 +259,11 @@
 
   // ========== 📱 480px+ ==========
   @media (min-width: 480px) {
-    &__list {
-      flex-direction: row;
-      gap: 30px;
+    &__ {
+      justify-content: space-between;
     }
-
-    &__items {
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-    }
-
-    &__contacts {
-      font-size: 14px;
+    &__items, &__nav {
+      display: none;
     }
 
     &__logo {
@@ -271,26 +271,40 @@
       text-align: left;
       margin: 0;
     }
+
+    &__menu {
+      display: block;
+      width: 40px;
+      height: 40px;
+      fill: $brand-dark-text-color;
+    }
   }
 
   // ========== 💻 768px+ ==========
   @media (min-width: 768px) {
-    &__nav {
-      display: block;
+    &__items, &__nav  {
+      display: flex;
     }
 
     &__list {
+      flex-direction: row;
       gap: 40px;
     }
 
     &__items {
-      gap: 30px;
+      flex-direction: row;
+      // align-items: center;
+      gap: 20px;
+    }
+    &__menu {
+      display: none;
     }
   }
 
   // ========== 🖥️ 1200px+ ==========
   @media (min-width: 1200px) {
     padding: 32px 0;
+    flex-direction: row;
 
     & > .container {
       justify-content: space-between;
