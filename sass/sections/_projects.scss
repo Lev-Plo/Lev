@@ -44,8 +44,12 @@
   &__item {
     outline: 1px solid $brand-border-color;
     width: 100%;
-    max-width: 370px;
+    width: 450px;
     transition: box-shadow 0.3s ease;
+
+    @media (min-width: 768px) {
+      width: 354px;
+    }
 
     &:hover {
       .project__hover {
