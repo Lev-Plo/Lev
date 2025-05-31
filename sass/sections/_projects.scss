@@ -1,12 +1,20 @@
 .project {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &__filter {
     @include flexbox();
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 50px;
+    
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
+
   }
 
   .filter {
@@ -45,10 +53,16 @@
     outline: 1px solid $brand-border-color;
     width: 100%;
     width: 450px;
+    height: 404px;
     transition: box-shadow 0.3s ease;
 
     @media (min-width: 768px) {
       width: 354px;
+      height: 440px;
+    }
+    @media (min-width: 1200px) {
+      width: 370px;
+      height: 404px;
     }
 
     &:hover {
@@ -64,6 +78,7 @@
   &__img {
     position:relative;
     overflow: hidden;
+    height: 294px;
   }
 
   &__hover {

@@ -163,12 +163,13 @@
 
     & > .container {
       justify-content: space-between;
-      gap: 50px;
+    }
+    &__nav {
+      padding-right: 222px;
     }
 
     &__logo {
       font-size: 26px;
-      margin-right: 40px;
     }
     &__items {
       flex-direction: row;

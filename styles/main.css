@@ -50,7 +50,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 
@@ -397,11 +397,12 @@ a {
   }
   .header > .container {
     justify-content: space-between;
-    gap: 50px;
+  }
+  .header__nav {
+    padding-right: 222px;
   }
   .header__logo {
     font-size: 26px;
-    margin-right: 40px;
   }
   .header__items {
     flex-direction: row;
@@ -824,7 +825,7 @@ a {
     align-items: baseline;
     flex-direction: row;
     text-align: left;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 .footer__address__item:first-child .footer__address__link {
@@ -967,7 +968,12 @@ a {
 }
 
 .project {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media (min-width: 1200px) {
+  .project {
+    padding: 94px 0;
+  }
 }
 .project__filter {
   display: flex;
@@ -976,8 +982,13 @@ a {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .project__filter {
+    justify-content: center;
+  }
 }
 .project .filter__btn {
   color: #212121;
@@ -1013,11 +1024,19 @@ a {
   outline: 1px solid #eeeeee;
   width: 100%;
   width: 450px;
+  height: 404px;
   transition: box-shadow 0.3s ease;
 }
 @media (min-width: 768px) {
   .project__item {
     width: 354px;
+    height: 440px;
+  }
+}
+@media (min-width: 1200px) {
+  .project__item {
+    width: 370px;
+    height: 404px;
   }
 }
 .project__item:hover {
@@ -1030,6 +1049,7 @@ a {
 .project__img {
   position: relative;
   overflow: hidden;
+  height: 294px;
 }
 .project__hover {
   position: absolute;
