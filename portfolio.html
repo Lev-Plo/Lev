@@ -23,10 +23,10 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="./index.html"> Студія</a>
+            <a class="header__link active" href="./index.html"> Студія</a>
           </li>
           <li class="header__item">
-            <a class="header__link active" href="./portfolio.html">Портфоліо</a>
+            <a class="header__link" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="./contacts.html">Контакти</a>
@@ -42,15 +42,37 @@
             info@devstudio.com</a>
         </li>
         <li class="header__elem">
-          <a class="header__contacts" href="tell:+380961111111"><svg class="header__icon smartphone">
+          <a class="header__contacts" href="tel:+380961111111"><svg class="header__icon smartphone">
               <use href="./images/symbol-defs.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11</a>
         </li>
       </ul>
       <svg class="header__menu">
-        <use href="./images/symbol-defs.svg#icon-menu"></use>
+        <use href="./images/symbol-defs.svg#icon-menu" data-mobile-open></use>
       </svg>
+      <div class="mobile is-hidden" data-mobile>
+        <button type="button" class="mobile__close" data-mobile-close>
+          <svg class="mobile__icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mobile__list">
+          <li class="mobile__item"><a href="./index.html" class="mobile__link">Студія</a></li>
+          <li class="mobile__item"><a href="./portfolio.html" class="mobile__link">Портфоліо</a></li>
+          <li class="mobile__item"><a href="#" class="mobile__link">Контакти</a></li>
+        </ul>
+        <ul class="mobile__items">
+          <li class="mobile__itm"><a href="tel:+380961111111" class="mobile__contact">+38 096 111 11 11</a></li>
+          <li class="mobile__itm"><a href="mailto:info@devstudio.com" class="mobile__contact">info@devstudio.com</a></li>
+        </ul>
+        <ul class="mobile__elements">
+          <li class="mobile__elem"><a href="#" class="mobile__social">Instagram</a></li>
+          <li class="mobile__elem"><a href="#" class="mobile__social">Twitter</a></li>
+          <li class="mobile__elem"><a href="#" class="mobile__social">Facebook</a></li>
+          <li class="mobile__elem"><a href="#" class="mobile__social">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -249,6 +271,7 @@
       </form>
     </div>
   </footer>
+    <script src="./js/mobile.js" type="module"></script>
 </body>
 
 </html>
