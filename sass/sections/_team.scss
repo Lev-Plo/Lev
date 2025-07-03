@@ -59,6 +59,10 @@
     @media (min-width: 1200px) {
       width: calc(25% - 22.5px);
     }
+
+    @media (min-width: 320px) {
+      width: 290px;
+    }
   }
 
   &__box {
