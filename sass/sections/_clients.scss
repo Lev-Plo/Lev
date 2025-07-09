@@ -31,7 +31,7 @@
   }
 
   &__link {
-    width: 210px;
+    max-width: 210px;
     height: 92px;
     border-radius: 5px;
     border: 1px solid $brand-light-icon-color;
@@ -45,6 +45,9 @@
         transition-duration: 250ms;
         transition: cubic-bezier(0.4, 0, 0.2, 1);
       }
+    }
+    @media (max-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
     }
 
     @media (min-width: 768px) {

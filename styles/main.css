@@ -38,9 +38,9 @@ a {
   margin: 0 auto;
   box-sizing: unset;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .container {
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -266,7 +266,7 @@ a {
   align-items: center;
   gap: 20px;
 }
-@media (min-width: 480px) {
+@media (max-width: 768px) {
   .header > .container {
     justify-content: space-between;
   }
@@ -280,7 +280,6 @@ a {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: #212121;
-  margin: 0 auto;
   text-align: center;
 }
 .header__logo .header__blue {
@@ -354,7 +353,7 @@ a {
   width: 10px;
   height: 16px;
 }
-@media (min-width: 480px) {
+@media (max-width: 768px) {
   .header__ {
     justify-content: space-between;
   }
@@ -374,6 +373,9 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .header > .container {
+    justify-content: space-between;
+  }
   .header__items, .header__nav {
     display: flex;
   }
@@ -616,7 +618,7 @@ a {
 .description__item {
   flex-basis: 100%;
 }
-@media (min-width: 480px) {
+@media (max-width: 768px) {
   .description__item {
     flex-basis: 450px;
   }
@@ -777,7 +779,7 @@ a {
 }
 .team__item {
   width: 100%;
-  width: 450px;
+  max-width: 450px;
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
@@ -879,7 +881,7 @@ a {
   justify-content: center;
 }
 .client__link {
-  width: 210px;
+  max-width: 210px;
   height: 92px;
   border-radius: 5px;
   border: 1px solid #AFB1B8;
@@ -895,6 +897,11 @@ a {
   fill: #2196f3;
   transition-duration: 250ms;
   transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 768px) {
+  .client__link {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 @media (min-width: 768px) {
   .client__link {
@@ -1144,7 +1151,7 @@ a {
 .project__item {
   outline: 1px solid #eeeeee;
   width: 100%;
-  width: 450px;
+  max-width: 450px;
   height: 404px;
   transition: box-shadow 0.3s ease;
 }

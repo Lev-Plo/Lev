@@ -52,7 +52,7 @@
   &__item {
     outline: 1px solid $brand-border-color;
     width: 100%;
-    width: 450px;
+    max-width: 450px;
     height: 404px;
     transition: box-shadow 0.3s ease;
 

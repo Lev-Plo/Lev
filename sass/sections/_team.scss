@@ -43,7 +43,7 @@
 
   &__item {
     width: 100%;
-    width: 450px;
+    max-width: 450px;
     text-align: center;
     background-color: $white-color;
     border-radius: 4px;
@@ -64,6 +64,7 @@
       width: 290px;
     }
   }
+
 
   &__box {
     padding: 30px 0;

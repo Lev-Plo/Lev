@@ -3,8 +3,8 @@
     padding: 0 15px;
     margin: 0 auto;
     box-sizing: unset;
-    @media screen and (min-width: 480px){
-      width: 450px;
+    @media screen and (max-width: 768px){
+      max-width: 450px;
     }
     @media screen and (min-width: 768px){
       width: 738px;
